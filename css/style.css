@@ -1,0 +1,263 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+:root {
+    --main-font: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--main-font);
+    background-color: #232234;
+    color: #dddbe9;
+    height: 100vh;
+    min-height: 500px;
+    padding: 3%;
+}
+
+h1 {
+    margin-top: 20px;
+    color: #f43983;
+    text-shadow: 1px 1px 2px #000;
+    text-transform: uppercase;
+}
+
+h1, h2 {
+    text-align: center;
+    padding: 0 2%;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 2%;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    padding: 3% 2% 0%;
+}
+
+.container h2 {
+    margin-bottom: 20px;
+}
+
+.choose-calc {
+    display: flex;
+}
+
+select#choose-model {
+    width: 80%;
+    padding: 10px;
+    font-size: 17px;
+    outline-color: #584196;
+    border-color: #584196;
+    background: none;
+    color: #dddbe9;
+    border-radius: 30px;
+}
+
+option {
+    background-color: #232234;
+}
+
+.check-select {
+    width: auto;
+    margin-left:10px;
+    background-color: #584196;
+    color: #fff;
+    font-size: 17px;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 3% 2%;
+    margin: 0 auto;
+}
+
+.area-percent1,
+.area-percent2 {
+    background-color: #302f48;
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+    box-shadow: 0px 1px 20px 0px rgba(16, 14, 23, 0.8);
+    border-radius: 10px;
+    color: #dddbe9;
+    text-align: center;
+}
+
+.area-percent2 {
+    display: none;
+}
+
+.percent-area1,
+.percent-area2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.percent-area1 label,
+.percent-area2 label {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.percent-area1 input,
+.percent-area2 input {
+    padding: 10px 20px;
+    font-size: 17px;
+    outline-color: #584196;
+}
+
+input#percent,
+input#percent2,
+input#value-percent, 
+input#value-percent2 {
+    margin-top: 15px;
+    border: none;
+    border-radius: 30px;
+}
+
+.buttons-area {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+i.fa.fa-calculator,
+i.fa.fa-trash {
+    display: block;
+    margin-right: 10px;
+}
+
+.btn-calc,
+.btn-calc2 {
+    margin-right: 30px;
+}
+
+.btn-calc, 
+.btn-calc2 {
+    padding: 10px 20px;
+    width: auto;
+    background-color: #027cff;
+    border: none;
+    border-radius: 20px;
+    color: #dddbe9;
+    font-size: 15px;
+    display: flex;
+}
+
+.btn-clear, 
+.btn-clear2 {
+    padding: 10px 20px;
+    width: auto;
+    background-color: #f43983;
+    border: none;
+    border-radius: 20px;
+    color: #dddbe9;
+    font-size: 15px;
+    display: flex;
+}
+
+.result-area {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+.result-area span {
+    margin-bottom: 10px;
+}
+
+.result,
+.result2 {
+    width: 50%;
+    border: 2px solid #584196;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 17px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+p.social-icon {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+p.social-icon a {
+    color: #dddbe9;
+    gap: 20px;
+    font-size: 18px;
+}
+
+/*RESPONSIVE AREA*/
+
+@media (max-width: 600px) {
+    .choose-calc {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    select#choose-model {
+        width: 100%;
+    }
+
+    .check-select {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+        padding:10px;
+    }
+}
+
+@media (max-width:554px) {
+    .percent-area1 label, .percent-area2 label {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .buttons-area {
+        flex-direction: column;
+    }
+
+    .btn-calc, .btn-clear, .btn-calc2, .btn-clear2 {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        justify-content: center;
+    }
+}
